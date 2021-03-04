@@ -1,9 +1,14 @@
-#!/bin/bash
-empcheck=$((RANDOM%2))
-ispresent=1
-if [ $empcheck -eq $ispresent ]
+#! /bin/bash
+
+ EMP_RATE_PER_HR=20;
+ FULL_TIME_HRS=8;
+
+randomCheck=$((RANDOM%2))
+isPresent=1;
+if [ $isPresent -eq $randomCheck ]
 then
-echo "empployee is present"
-else
-echo "empploye is absent"
+         salary=$(( $EMP_RATE_PER_HR*$FULL_TIME_HRS))
+   else
+      salary=0;
 fi
+echo "Daily Wage of an Employee= " $salary
